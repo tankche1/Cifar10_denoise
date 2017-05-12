@@ -46,6 +46,7 @@ classifier:add(nn.ReLU(true))
 classifier:add(nn.Dropout(0.5))
 classifier:add(nn.Linear(512,10))
 vgg:add(classifier)
+vgg:add(nn.LogSoftMax())
 
 -- initialization from MSR
 local function MSRinit(net)
